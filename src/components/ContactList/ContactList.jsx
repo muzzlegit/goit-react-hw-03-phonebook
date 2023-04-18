@@ -17,6 +17,7 @@ export const ContactList = ({ isContacts, contacstList, deleteContact }) => {
       {contacstList.map((contact, index) => {
         return (
           <ContactItem
+            key={index}
             contact={contact}
             index={index}
             deleteContact={deleteContact}
