@@ -68,7 +68,7 @@ export class App extends Component {
               onFilterChange={this.onFilterChange}
             />
             <ContactList
-              contacts={this.state.contacts}
+              isContacts={this.state.contacts.length}
               contacstList={visibleContact}
               deleteContact={this.deleteContact}
             />

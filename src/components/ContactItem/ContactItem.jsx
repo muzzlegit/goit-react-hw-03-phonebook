@@ -24,7 +24,13 @@ export const ContactItem = ({ contact, index, deleteContact }) => {
 };
 
 ContactItem.propTypes = {
-  item: PropTypes.object.isRequired,
+  contact: PropTypes.objectOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
   index: PropTypes.number.isRequired,
   deleteContact: PropTypes.func.isRequired,
 };

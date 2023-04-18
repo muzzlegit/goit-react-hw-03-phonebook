@@ -4,12 +4,12 @@ import { ContactItem } from 'components/ContactItem/ContactItem';
 //STYLE
 import { List, Item } from './ContactList.styled';
 
-export const ContactList = ({ contacts, contacstList, deleteContact }) => {
+export const ContactList = ({ isContacts, contacstList, deleteContact }) => {
   return (
     <List>
       {!contacstList.length ? (
         <Item color="black">
-          {contacts.length
+          {isContacts
             ? 'В тебе немає такого контакту'
             : 'Здається, в тебе немає жодного знайомого :('}
         </Item>
@@ -28,7 +28,7 @@ export const ContactList = ({ contacts, contacstList, deleteContact }) => {
 };
 
 ContactList.propTypes = {
-  contacts: PropTypes.array.isRequired,
-  contacstList: PropTypes.array.isRequired,
+  isContacts: PropTypes.number.isRequired,
+  contacstList: PropTypes.arrayOf(PropTypes.object.isRequired),
   deleteContact: PropTypes.func.isRequired,
 };

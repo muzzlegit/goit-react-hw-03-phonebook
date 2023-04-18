@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 //ICONS
 import { BsPersonPlus } from 'react-icons/bs';
@@ -61,3 +62,7 @@ export class ContactForm extends Component {
     );
   }
 }
+
+ContactForm.propTypes = {
+  addContact: PropTypes.func.isRequired,
+};
