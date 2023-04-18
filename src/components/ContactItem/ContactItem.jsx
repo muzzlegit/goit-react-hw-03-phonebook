@@ -25,5 +25,6 @@ export const ContactItem = ({ contact, index, deleteContact }) => {
 
 ContactItem.propTypes = {
   item: PropTypes.object.isRequired,
+  index: PropTypes.number.isRequired,
   deleteContact: PropTypes.func.isRequired,
 };
