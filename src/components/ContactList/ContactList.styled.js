@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import theme from 'theme';
 
 export const List = styled.ul({
   height: '710px',
